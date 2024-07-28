@@ -1,0 +1,33 @@
+﻿@model List<StocksApp.Models.ipo>
+
+<h1>All IPO Details</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Exchange</th>
+            <th>Name</th>
+            <th>Number of Shares</th>
+            <th>Price</th>
+            <th>Status</th>
+            <th>Symbol</th>
+            <th>Total Shares Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ipo in Model)
+        {
+            <tr>
+                <td>@ipo.Date</td>
+                <td>@ipo.Exchange</td>
+                <td>@ipo.Name</td>
+                <td>@ipo.NumberOfShares</td>
+                <td>@ipo.Price</td>
+                <td>@ipo.Status</td>
+                <td>@ipo.Symbol</td>
+                <td>@ipo.TotalSharesValue</td>
+            </tr>
+        }
+    </tbody>
+</table>
