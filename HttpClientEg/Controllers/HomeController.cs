@@ -29,7 +29,6 @@ namespace StocksApp.Controllers
                 _ipoDetails.Value.toDate = DateOnly.ParseExact(toDate, "yyyy-mm-dd");
             }
 
-            //Dictionary<string, object>? responseDictionary = await _finnhubService.GetIpoDetails("ZENTALIS PHARMACEUTICALS, LLC");
             //Dictionary<string, object>? responseDictionary = await _finnhubService.GetIpoDetails(_ipoDetails.Value.fromDate, _ipoDetails.Value.toDate);
             IpoCalendarResponse response = await _finnhubService.GetIpoDetails(_ipoDetails.Value.fromDate, _ipoDetails.Value.toDate);
             
